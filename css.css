@@ -10,7 +10,8 @@
   color: white;
   width: auto;
   font-weight: bolder;
-  font-size: 20px
+  font-size: 16px;
+  width: 250px
 
 }
 div.title {
@@ -23,7 +24,6 @@ font-weight: bold;
 }
 
 body {
-/*background: rgba(176, 216, 255, 0.5)*/
 background: rgb(232,227,224)
 }
 
@@ -36,16 +36,13 @@ background: rgb(232,227,224)
 }
 
 g {
-  font-size: 16;
+  font-size: 9;
 color: white
 
 }
-circle:hover {
-  fill: red
-}
+
 .labels {
   font-size: 20px;
   font-weight: bolder;
   font-family: Arial
-
 }
