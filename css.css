@@ -1,0 +1,43 @@
+.d3-tip {
+
+  top: 184.273px;
+  background: rgba(25, 25, 25, 0.8);
+  pointer-events: none;
+  box-sizing: border-box;
+  left: -37.6667px;
+  text-overflow: ellipsis ;
+  padding: 20px;
+  color: white;
+  width: auto;
+  font-weight: bolder;
+  font-size: 20px
+
+}
+div.title {
+  width: 800px;
+  height: 150px;
+  text-align: center;
+  font-size: 32px;
+  margin: 0 200px;
+color: white;
+font-weight: bold;
+}
+
+body {
+  background-image: url("https://timedotcom.files.wordpress.com/2014/10/tour-de-france.jpeg?quality=85&w=1014")  ;
+  background-repeat: no-repeat;
+background-size: cover
+}
+.axis {
+  stroke-width: 5px;
+  font-weight: bolder;
+  color: inherit;
+  fill: white;
+
+}
+
+g {
+  font-size: 25;
+color: white
+
+}
