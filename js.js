@@ -1,7 +1,7 @@
 
 
 var padding = 20,
-margin = {top: 50, bottom: 60, left: 90, right: 50},
+margin = {top: 20, bottom: 60, left: 90, right: 50},
 h = 500 - margin.top - margin.bottom + padding ,
   w = 1000 - margin.left - margin.right;
 
@@ -21,14 +21,16 @@ d3.select("div").text("Data Collected for Professional Cyclists and Evaluating T
 
 d3.json(url, function(data){
 
-
+// data.forEach(function(d){
+//   d.Seconds = d.Seconds/60
+// })
 //Tool-Tip
 tip = d3.tip().attr('class', 'd3-tip').html(function(d) {
 if(d.Doping !== ""){
-  return `<p> In ${d.Year}, ${d.Name} placed ${d.Place} and </br> had ${d.Doping} </p>` ;
+  return `<p> In ${d.Year}, ${d.Name}, completed race in ${d.Seconds} seconds and placed ${d.Place}</br> had ${d.Doping} </p>` ;
 }
 else {
-  return `<p> ${d.Name}  </p>`
+  return `<p> ${d.Name}, complted race in ${d.Seconds} and placed ${d.Place} and there we no allegations of drug use  </p>`
 }
 });
 
@@ -66,6 +68,10 @@ svg.append("g").call(d3.axisBottom(x).ticks(20))
 svg.append("g").call(d3.axisLeft(y))
 .attr("transform", `translate(${margin.left + padding}, 0)`)
 .attr("class", "axis");
+
+svg.append("text").text("Placed Finised ").attr("transform", `rotate(-90)`).attr("x", `${-h/2}`).attr("class", "labels").attr("y", `${padding}`);
+
+svg.append("text").text("Time(seconds) to complete Competition ").attr("transform", `translate(${w/2}, ${h + padding + 20})` ).attr("class", "labels") ;
 
 
 //Tool-Tip
