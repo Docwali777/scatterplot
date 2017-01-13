@@ -19,15 +19,14 @@ div.title {
   text-align: center;
   font-size: 32px;
   margin: 0 200px;
-color: white;
 font-weight: bold;
 }
 
 body {
-  background-image: url("https://timedotcom.files.wordpress.com/2014/10/tour-de-france.jpeg?quality=85&w=1014")  ;
-  background-repeat: no-repeat;
-background-size: cover
+/*background: rgba(176, 216, 255, 0.5)*/
+background: rgb(232,227,224)
 }
+
 .axis {
   stroke-width: 5px;
   font-weight: bolder;
@@ -37,7 +36,10 @@ background-size: cover
 }
 
 g {
-  font-size: 25;
+  font-size: 16;
 color: white
 
+}
+circle:hover {
+  fill: red
 }

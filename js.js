@@ -6,7 +6,7 @@ h = 500 - margin.top - margin.bottom + padding ,
   w = 1000 - margin.left - margin.right;
 
 var svg  = d3.select("body").append("svg").attr("height", h + margin.top + margin.bottom).attr("width",w + margin.right + margin.left)
-.style("background", "rgba(176, 216, 255, 0.5)").append("g")
+.append("g")
 .attr("transform", `translate(${margin.left}, ${(margin.top )})`)
 
 
@@ -52,7 +52,7 @@ circle.attr("cx", function(d){return x(d.Seconds)})
 .attr("r", 5)
 .attr("fill", function(d){
 if(d.Doping === ""){
-  return "yellow"
+  return "rgb(16,30,88)"  //"rgb(3, 99, 145)"
 } else {
   return "orange"
 }
